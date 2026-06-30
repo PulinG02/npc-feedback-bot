@@ -25,8 +25,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # ── ENV ──────────────────────────────────────────────────
-BOT_TOKEN = "8203041637:AAGagssGEzkwZ46wNnkVwUPECAcxu0xrs68"
-FORWARD_ID = -1003991145962
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+FORWARD_ID = int(os.environ.get("FORWARD_CHAT_ID", "0"))
 
 # ── STATES ───────────────────────────────────────────────
 RATING, CATEGORY, MESSAGE, PHOTO = range(4)
